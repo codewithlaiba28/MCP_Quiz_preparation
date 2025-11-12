@@ -310,3 +310,5 @@ Header = HTTP header mein version
 Media Type = Accept header mein version
 
 ---
+
+JSON-RPC aur REST dono HTTP ke through use kiye jaate hain, lekin JSON-RPC sirf HTTP tak limited nahi — WebSockets waghera ke sath bhi use hota hai. REST mostly HTTP ke sath use hota hai.
