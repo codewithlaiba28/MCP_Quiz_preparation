@@ -673,4 +673,104 @@ d) All of the above
 
 ---
 
+### **MCP & JSON-RPC Quiz**
 
+**Q1.** Why does MCP prefer JSON-RPC over REST for agent/model orchestration?
+A) JSON-RPC is simpler to implement than REST
+B) MCP requires procedural/command-like operations that REST cannot express directly
+C) REST cannot work over HTTP
+D) JSON-RPC automatically handles database transactions
+
+**Answer:** B
+
+---
+
+**Q2.** Which of the following MCP operations is difficult to map to REST’s CRUD model?
+A) GET resource
+B) POST resource
+C) Start, cancel, resume agent workflows
+D) PUT resource
+
+**Answer:** C
+
+---
+
+**Q3.** How does JSON-RPC handle multiple calls over a single connection compared to REST?
+A) REST uses streaming; JSON-RPC opens a new request for each call
+B) JSON-RPC supports multiplexing and streaming natively; REST usually opens a new connection per request
+C) REST can only handle WebSockets; JSON-RPC cannot
+D) JSON-RPC cannot send notifications; REST can
+
+**Answer:** B
+
+---
+
+**Q4.** In JSON-RPC, how is an operation or action explicitly defined?
+A) By the HTTP verb (GET, POST, PUT, DELETE)
+B) By the URL endpoint only
+C) By a `"method"` field in the JSON request
+D) By the server automatically guessing the action
+
+**Answer:** C
+
+---
+
+**Q5.** MCP workflows require statefulness. How does JSON-RPC support this?
+A) JSON-RPC itself maintains the session state automatically
+B) State is maintained by the server using session/context IDs included in each request
+C) JSON-RPC cannot support stateful workflows
+D) REST handles state, so JSON-RPC does not need to
+
+**Answer:** B
+
+---
+
+**Q6.** Which feature is **built-in in JSON-RPC** but not idiomatic in REST?
+A) Structured error responses
+B) Notifications and one-way messages
+C) Extensibility via new methods
+D) All of the above
+
+**Answer:** D
+
+---
+
+**Q7.** Which of the following best describes the paradigm of JSON-RPC?
+A) CRUD/Resource
+B) Remote Procedure Call (RPC)
+C) SOAP-based
+D) Stateless only
+
+**Answer:** B
+
+---
+
+**Q8.** Why is JSON-RPC favored in IDE protocols like LSP or Debug Adapter Protocol?
+A) It is stateless
+B) It supports real-time notifications, structured requests, and extensibility
+C) It is easier to cache responses
+D) It only uses GET requests
+
+**Answer:** B
+
+---
+
+**Q9.** Which MCP requirement is **NOT easily handled by REST**?
+A) Fine-grained control over model context and tools
+B) Real-time interactivity and notifications
+C) Multiple concurrent operations over a single connection
+D) Simple CRUD database updates
+
+**Answer:** D (CRUD is REST’s strength, not its weakness)
+
+---
+
+**Q10.** What is the main advantage of JSON-RPC’s structured error handling for MCP?
+A) It allows server errors to be ignored
+B) It ensures every request has a standardized error response with code, message, and data
+C) REST already provides better error handling
+D) It prevents network latency
+
+**Answer:** B
+
+---
