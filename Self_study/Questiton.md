@@ -312,3 +312,268 @@ Resource: Reads data from the web
 
 
 5. Write a JSON-RPC example to call a tool with multiple parameters, including validation.
+
+
+
+
+
+
+
+
+
+
+
+
+Got it! I’ll generate a **20-question multiple-choice quiz** covering all the topics you listed, with each question having **4 options and one correct answer**. I’ll make it exam-focused and advanced-level.
+
+---
+
+### **HTTP & REST Fundamentals**
+
+**1.** Which of the following best describes HTTP?
+A) A protocol for sending files only
+B) A stateless request–response protocol
+C) A protocol that maintains session by default
+D) A database query language
+**Answer:** B
+
+**2.** In HTTP, what does a 404 status code indicate?
+A) Successful request
+B) Resource not found
+C) Server error
+D) Unauthorized access
+**Answer:** B
+
+**3.** Which HTTP method is idempotent and used to update a resource?
+A) POST
+B) PUT
+C) PATCH
+D) DELETE
+**Answer:** B
+
+**4.** REST principle “statelessness” means:
+A) Server stores session info for each client
+B) Each request contains all information for processing
+C) Client cannot send multiple requests
+D) Only GET requests are allowed
+**Answer:** B
+
+**5.** Which of these is a recommended REST URI design practice?
+A) Use verbs in the URI
+B) Use nouns and hierarchical structure
+C) Include file extensions like `.php`
+D) Include query parameters for resource identification
+**Answer:** B
+
+---
+
+### **JSON-RPC 2.0**
+
+**6.** In JSON-RPC, which object is optional for notifications?
+A) `jsonrpc`
+B) `method`
+C) `id`
+D) `params`
+**Answer:** C
+
+**7.** What is the difference between a JSON-RPC request and a notification?
+A) Requests expect a response, notifications do not
+B) Notifications require authentication
+C) Requests are transport-agnostic, notifications are not
+D) Notifications are only for errors
+**Answer:** A
+
+**8.** Reserved method names in JSON-RPC include:
+A) `echo`
+B) `subtract`
+C) `rpc.*`
+D) `getInfo`
+**Answer:** C
+
+**9.** JSON-RPC is transport-agnostic. What does this mean?
+A) It can only work over HTTP
+B) It can be used over multiple transports like WebSocket, TCP, HTTP
+C) It stores session data on the server
+D) It requires encryption
+**Answer:** B
+
+**10.** Which JSON-RPC field contains the parameters for a method call?
+A) `jsonrpc`
+B) `method`
+C) `params`
+D) `id`
+**Answer:** C
+
+---
+
+### **MCP Fundamental Primitives**
+
+**11.** What is the primary role of an MCP server?
+A) To store client-side data
+B) To provide tools and execute client requests
+C) To maintain HTTP connections only
+D) To convert JSON to XML
+**Answer:** B
+
+**12.** In MCP, which primitive lists the available tools on the server?
+A) CallTool
+B) ListTools
+C) InvokeTool
+D) GetResources
+**Answer:** B
+
+**13.** MCP architecture is transport-agnostic. This means:
+A) It only works over HTTP
+B) It can function over multiple transports (HTTP, WebSocket, etc.)
+C) It requires persistent TCP sessions
+D) It is only compatible with OpenAI SDK
+**Answer:** B
+
+**14.** The MCP primitive used to invoke a server tool is:
+A) ListTools
+B) CallTool
+C) NotifyTool
+D) RunTool
+**Answer:** B
+
+**15.** Which statement about MCP Clients is correct?
+A) Clients host tools
+B) Clients only send requests and process responses
+C) Clients cannot use JSON-RPC
+D) Clients maintain tool databases
+**Answer:** B
+
+---
+
+### **Advanced MCP Topics**
+
+**16.** What is MCP sampling used for?
+A) Listing all client connections
+B) Controlling and filtering tool outputs
+C) Encrypting server logs
+D) Managing HTTP headers
+**Answer:** B
+
+**17.** MCP logging helps:
+A) Store session data
+B) Communicate server state and debug info to clients
+C) Generate random tool outputs
+D) Authenticate clients
+**Answer:** B
+
+**18.** MCP progress notifications are useful for:
+A) Monitoring long-running tasks in real-time
+B) Storing sensitive information
+C) Encrypting messages
+D) Creating REST APIs
+**Answer:** A
+
+**19.** What does the MCP “roots” feature handle?
+A) User authentication
+B) Security and trust in tool execution
+C) Tool discovery
+D) HTTP routing
+**Answer:** B
+
+**20.** Which transport configuration allows MCP to remain stateless?
+A) WebSocket with sessions
+B) Stateless HTTP
+C) TCP with persistent connection
+D) HTTPS with cookies
+**Answer:** B
+
+---
+
+### **MCP & OpenAI Agents SDK Integration**
+
+**21.** MCP integration with OpenAI Agents allows:
+A) Automatic UI rendering
+B) Tool discovery and invocation from within agents
+C) Storing agent context in local files
+D) Only HTTP GET calls
+**Answer:** B
+
+**22.** Stateless MCP connections in OpenAI Agents mean:
+A) Agents must store all conversation context themselves
+B) Servers save client sessions automatically
+C) Clients cannot call tools
+D) Connections use WebSocket exclusively
+**Answer:** A
+
+**23.** MCP workflows in OpenAI Agents can:
+A) Run multiple tools in sequence automatically
+B) Only call a single tool per session
+C) Ignore JSON-RPC rules
+D) Execute non-MCP tasks only
+**Answer:** A
+
+**24.** Which of the following is NOT part of MCP & OpenAI Agents SDK integration?
+A) Tool discovery
+B) Prompts
+C) Sessionless execution
+D) File system monitoring
+**Answer:** D
+
+**25.** When integrating MCP with OpenAI Agents, what is a primary advantage?
+A) Built-in encryption of all messages
+B) Ability to extend agent capabilities using server tools
+C) Agents no longer need prompts
+D) Eliminates the need for JSON-RPC
+**Answer:** B
+
+---
+
+Based on the sequence diagram you uploaded, here are **5 quiz questions**:
+
+---
+
+**1.** In the sequence diagram, which MCP primitive is used to retrieve the list of available tools from the MCP Server?
+A) CallToolRequest
+B) ListToolsRequest
+C) ToolUse
+D) Query + Tools
+**Answer:** B
+
+---
+
+**2.** After the MCP Server responds with `ListToolsResult`, what is the next step in the workflow?
+A) User directly requests GitHub
+B) MCP Client sends `CallToolRequest`
+C) Our Server sends `Query + Tools` to Claude
+D) MCP Server executes `ToolUse` on GitHub
+**Answer:** C
+
+---
+
+**3.** Which component in the diagram is responsible for actually sending the request to GitHub?
+A) MCP Client
+B) Our Server
+C) MCP Server
+D) Claude
+**Answer:** C
+
+---
+
+**4.** What is the purpose of the `CallToolResult` in the MCP workflow?
+A) To request the list of tools from the server
+B) To provide the result of running a tool back to the MCP Client
+C) To initiate a new session with Claude
+D) To store repository info in Our Server
+**Answer:** B
+
+---
+
+**5.** In this workflow, which statement is true about the role of Claude?
+A) Claude lists tools and executes them
+B) Claude queries the MCP Server directly for repositories
+C) Claude receives a query with tools and orchestrates tool execution
+D) Claude stores results locally and sends them to GitHub
+**Answer:** C
+
+---
+
+
+
+
+
+
