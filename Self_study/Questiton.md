@@ -576,4 +576,31 @@ D) Claude stores results locally and sends them to GitHub
 
 
 
+Here are **very short, simple answers** for each point:
+
+1. **Sampling vs direct tool use** →
+   Sampling when LLM decides the tool; direct implementation when you want full control.
+
+2. **Stateful vs stateless** →
+   Stateful remembers previous steps; stateless treats every request as new.
+
+3. **Progress notifications** →
+   Use them when the task is long so the client knows it's still running.
+
+4. **User context via roots** →
+   Use roots to access user data like files, folders, or workspace.
+
+5. **Choose transport protocol** →
+   HTTP for remote; WebSocket for real-time; stdio for local tools.
+
+6. **JSON-RPC + MCP** →
+   JSON-RPC gives request/response structure; MCP adds tools, prompts, resources.
+
+7. **Secure HTTP authentication** →
+   Use tokens, API keys, or OAuth; always use HTTPS.
+
+8. **Error handling** →
+   Catch failures, return proper error codes, and send structured error messages.
+
+If you want, I can turn this into **MCQs**, **flashcards**, or a **1-page exam sheet**.
 
